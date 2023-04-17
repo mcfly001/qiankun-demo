@@ -1,8 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { registerMicroApps, start } from 'qiankun';
+import { history } from './utils'
+import './index.css';
+
+registerMicroApps([
+    {
+      name: 'project-sub1', // app name registered
+      entry: '//localhost:5001',
+      container: '#root',
+      activeRule: '/sub1',
+      props: {
+        history
+      }
+    },
+    {
+        name: 'project-sub2', // app name registered
+        entry: '//localhost:5002',
+        container: '#root',
+        activeRule: '/sub2',
+        props: {
+          history
+        }
+      }
+]);
+
+start()
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
