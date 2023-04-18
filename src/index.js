@@ -9,7 +9,7 @@ import './index.css';
 registerMicroApps([
     {
       name: 'project-sub1', // app name registered
-      entry: '//localhost:5001',
+      entry: '//localhost:2001',
       container: '#root',
       activeRule: '/sub1',
       props: {
@@ -18,7 +18,7 @@ registerMicroApps([
     },
     {
         name: 'project-sub2', // app name registered
-        entry: '//localhost:5002',
+        entry: '//localhost:2002',
         container: '#root',
         activeRule: '/sub2',
         props: {
